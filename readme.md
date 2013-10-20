@@ -49,7 +49,7 @@ In your php script, you can access your user's properties using the static metho
 
 User::setupUser();
 
-if (User->getUser()->authenticated){ /* logged in user actions */ }
+if (User::getUser()->authenticated){ /* logged in user actions */ }
 
 </pre>
 
@@ -203,7 +203,7 @@ All the above commands return Boolean:True on success, and an ErrorHandler objec
 
 <pre>
 
-$response = User->editUser(array(
+$response = User::editUser(array(
     "user_name" => "",
     "user_displayName" => "",
     "user&#95;type" => ""
