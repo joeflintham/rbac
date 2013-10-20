@@ -90,7 +90,7 @@ if (User::getUser()->authenticated){
 
 ## Permission cascading
 
-In order to keep the RBAC bolt-on as simple as possible, it is assumed that members of a higher rank inherit all the privileges of lower-ranking user&#95;types. Hence, the superuser has all the permissions of the admin, contributor, member and guest types. A consequence of this is that each user type could be permitted to edit the user&#95;type of lower-ranking users (e.g. a contributor could change a member into a contributor). Of course you can utilise or ovveride this behaviour by planning your permissions table carefully.
+In order to keep the RBAC bolt-on as simple as possible, it is assumed that members of a higher rank inherit all the privileges of lower-ranking user&#95;types. Hence, the superuser has all the permissions of the admin, contributor, member and guest types. A consequence of this is that each user type could be permitted to edit the user&#95;type of lower-ranking users (e.g. a contributor could change a member into a contributor). Of course you can utilise or override this behaviour by planning your permissions table carefully.
 
 ## Permission planning
 
