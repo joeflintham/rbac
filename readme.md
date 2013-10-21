@@ -141,11 +141,11 @@ mysql> grant all on rbac.* to rbac_user@localhost identified by 'rbac_pass';
 
 Edit config.php to reflect the database / credentials you used above. If you don't have CLI access to mysql, consider changing your host.
 
-Now create a temporary php script to intialise the database (there is one included in the package, 'setup.php', which should be removed after use). Assuming your php script is called 'setup.php', point your browser at:
+Now create a temporary php script to intialise the database (there is one included in the package, 'index.php', which should be removed after use). Assuming your php script is called 'setup.php', point your browser at:
 
 <pre>
 
-http://your.domain.com/path/to/rbac/setup.php?user_name=nobody&user_password=nobody
+http://your.domain.com/path/to/rbac/index.php?user_name=nobody&user_password=nobody
 
 </pre>
 
@@ -239,6 +239,6 @@ The above record allows you to test whether the current user has permission to c
 
 # Notes
 
-* Remove setup.php after use  
+* Remove index.php after use  
 * Don't use in production (savvy users can log in by hacking cookies and sessions, albeit only if they already have credentials, and you probably want to direct them through specific routes for analytics, conversion, etc)
 * If you're already using a DB class you should find it easy to wrap the User and Permissions classes around that instead of the DB class used here.
