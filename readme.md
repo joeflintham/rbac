@@ -15,7 +15,7 @@ I find when I'm building an app, I'm likely to have very specific requirements a
 
 ## Usage
 
-Once installed, you can initalise a static object which represents the current user. After including the necessary files, initialise the user as follows:
+Once installed, you can initialise a static object which represents the current user. After including the necessary files, initialise the user as follows:
 
 <pre>
 &lt;?php
@@ -128,7 +128,7 @@ First steps (more details follow beneath the initial list):
 
 ## Installation - walkthrough
 
-You can use phpMyAdmin; easier to use the mysql CLI. This example uses the database name 'rbac', the db username 'rbac&#95;user' and the password 'rbac&#95;pass'. Substitute with your own.
+Setting up your database: you can use phpMyAdmin; easier to use the mysql CLI. This example uses the database name 'rbac', the db username 'rbac&#95;user' and the password 'rbac&#95;pass'. Substitute with your own.
 
 <pre>
 
@@ -141,7 +141,7 @@ mysql> grant all on rbac.* to rbac_user@localhost identified by 'rbac_pass';
 
 Edit config.php to reflect the database / credentials you used above. If you don't have CLI access to mysql, consider changing your host.
 
-Now create a temporary php script to intialise the database (there is one included in the package, 'index.php', which should be removed after use). Assuming your php script is called 'setup.php', point your browser at:
+Now create a temporary php script to intialise the database (there is one included in the package, 'index.php', which should be removed after use). Assuming your php script is called 'index.php', point your browser at:
 
 <pre>
 
@@ -151,11 +151,11 @@ http://your.domain.com/path/to/rbac/index.php?user_name=nobody&user_password=nob
 
 On first run, this will create the necessary tables for your users and permissions.
 
-You now have a user table with a nobody user; and an empty permissions table.
+You now have a user table with a nobody user; and a permissions table with one demo permission for reference.
 
 # Creating users
 
-If you want to get up an running with some test users quickly, you can add them at the mysql CLI. The table only stores sha1 password hashes, so your insert comand should look something like this:
+If you want to get up and running with some test users quickly, you can add them at the mysql CLI. The table only stores sha1 password hashes, so your insert comand should look something like this:
 
 <pre>
 mysql> insert into users (user_name, user_password, user_displayName, user&#95;type) values ('joe', '16a9a54ddf4259952e3c118c763138e83693d7fd', 'Joe', 'member');
