@@ -133,7 +133,7 @@ You can use phpMyAdmin; easier to use the mysql CLI. This example uses the datab
 <pre>
 
 $ mysql -u db_admin_username -p
-<enter password at prompt>
+[enter db admin password at prompt]
 mysql> create database rbac;
 mysql> grant all on rbac.* to rbac_user@localhost identified by 'rbac_pass';
 
